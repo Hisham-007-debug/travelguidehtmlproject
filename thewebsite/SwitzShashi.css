@@ -5,7 +5,8 @@
 }
 @font-face {
   font-family: myFont; 
-  src: url;; 
+  src: url(fonts/berner-basisschrift);
+  
 }
 @font-face {
   font-family: myFont2; 
