@@ -11,10 +11,10 @@
   font-family: myFont2; /* set name */
   src: url(fonts/sekaiwo/Sekaiwo-Regular.otf); /* url of the font */
 }
-#hero {
+#hero {ng
     width: 100%;
     height: 100vh;
-    background-image: url(imagestobeusedforJapanPage/Screenshot\ 2025-11-12\ at\ 10.27.06\ AM.png);
+    background-image: url(imagestobeusedforJapanPage/japanmountain.jpg);
     background-size: cover;
     background-position: center;
     scroll-behavior: smooth ;
