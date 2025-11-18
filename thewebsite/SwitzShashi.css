@@ -242,6 +242,13 @@ iframe {
   border-radius: 12px;
   margin: 50px;
 }
+.footer {
+  background-color:  rgba(241, 235, 235, 0.836);
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
 
 
 
