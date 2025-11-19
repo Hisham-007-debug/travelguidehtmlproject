@@ -269,8 +269,9 @@ iframe {
   padding: 10px 12px;
   text-align: left;
   vertical-align: top;
-  border-bottom: .5px solid black;
-}
+  border-bottom: #000 1px solid;
+
+  }
 
 .p5 .small-table thead th {
   background: thistle;
@@ -311,6 +312,7 @@ iframe {
 .p5 .small-table tbody td:first-child {
   padding-right: 18px;
 }
+
 
 
 
