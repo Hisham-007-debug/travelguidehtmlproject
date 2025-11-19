@@ -9,12 +9,12 @@
 }
 @font-face {
   font-family: myFont2; /* set name */
-  src: url(fonts/sekaiwo/Sekaiwo-Regular.otf); /* url of the font */
+  src: url(fonts/hina-ming-chao/Hina-Mincho-Regular.ttf); /* url of the font */
 }
 #hero {
     width: 100%;
     height: 100vh;
-    background-image: url(imagestobeusedforJapanPage/japanmountain.jpg);
+    background-image: url(imagestobeusedforJapanPage/pexels-apasaric-2506923.jpg);
     background-size: cover;
     background-position: center;
     scroll-behavior: smooth ;
@@ -67,6 +67,7 @@ nav ul li a:hover{
     color: white;
     letter-spacing: 2px;
     font-family: myFont;
+    text-shadow: #000 7px 7px 7px;
 }
 .left-col h2{
     color:white;
@@ -74,6 +75,7 @@ nav ul li a:hover{
     margin-top: 25px;
     margin-left: 200px;
     font-family: myFont;
+    text-shadow: #000 7px 7px 7px;
 }
 
 .locations-section {
@@ -93,6 +95,7 @@ nav ul li a:hover{
     margin-bottom: 50px;
     font-size: 56px;
     font-family: myFont;
+    text-shadow: #000 2px 2px 2px;
 }
 
 .locations-grid {
@@ -108,8 +111,35 @@ nav ul li a:hover{
     margin-bottom: 40px;
     font-size: 56px;
     font-family: myFont;
+
+    text-shadow: #000 2px 2px 2px;
 }
-/* Video section styles */
+.locations-section2 {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.locations-section2 .container {
+    width: 90%;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.locations-section2 h1 {
+    color: #333;
+    margin: 25px;
+    margin-bottom: 50px;
+    font-size: 56px;
+    font-family: myFont;
+    text-shadow: #000 2px 2px 2px;
+}
+
+.locations-section2 .locations-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 .video-section {
     background: #ffffff;
     padding: 60px 0;
