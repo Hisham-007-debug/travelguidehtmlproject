@@ -274,10 +274,17 @@ iframe {
   border-collapse: separate;
   border-spacing: 0;
   background-color: thistle;
-  border-radius: 8px;
+  border-radius: 18px;
   font-size: 14px;
   border: 1px solid black;
-  
+  overflow: hidden; 
+}
+
+
+.p5 .small-table thead th,
+.p5 .small-table th,
+.p5 .small-table td {
+  background: inherit;
 }
 
 .p5 .small-table th,
