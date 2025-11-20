@@ -312,6 +312,10 @@ iframe {
 .p5 .small-table tbody td:first-child {
   padding-right: 18px;
 }
+.p5 .small-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 
 
 
