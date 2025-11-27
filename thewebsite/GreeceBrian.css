@@ -1,598 +1,118 @@
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Makes sizing easier to work with */
-}
-
-/* BODY: Sets default styles for the entire page */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* Space between lines for readability */
-    color: #333; /* Dark gray text */
-    background-color: #e8f4f8; /* Light blue background */
-}
-
-/* CONTAINER: Centers content and limits max width */
-.container {
-    max-width: 1200px; /* Won't get wider than 1200px */
-    margin: 0 auto; /* Centers the container */
-    padding: 0 20px; /* Space on left and right */
-}
-
-
-/* ===========================================
-   HEADER SECTION
-   =========================================== */
-
-.site-header {
-    background-color: #0066cc; /* Greek flag blue */
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.site-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
-}
-
-.tagline {
-    font-size: 18px;
-    font-style: italic;
-    color: #b3d9ff; /* Lighter blue */
-}
-
-/* RESPONSIVE: Smaller heading on mobile devices */
-@media (max-width: 768px) {
-    .site-header h1 {
-        font-size: 32px;
-    }
-    
-    .tagline {
-        font-size: 16px;
-    }
-}
-
-
-/* ===========================================
-   NAVIGATION BAR
-   =========================================== */
-
-.main-nav {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Stays at top when scrolling */
-    top: 0;
-    z-index: 100; /* Appears above other content */
-}
-
-.main-nav ul {
-    list-style: none; /* Removes bullet points */
-    display: flex;
-    justify-content: center; /* Centers items */
-    flex-wrap: wrap; /* Wraps on smaller screens */
-}
-
-.main-nav li {
-    margin: 0;
-}
-
-.main-nav a {
-    display: block;
-    padding: 15px 25px;
-    color: #0066cc;
-    text-decoration: none; /* Removes underline */
-    font-weight: 600;
-    transition: all 0.3s ease; /* Smooth animation */
-}
-
-/* Hover effect - changes when mouse is over link */
-.main-nav a:hover {
-    background-color: #0066cc;
-    color: white;
-}
-
-/* RESPONSIVE: Stack navigation vertically on mobile */
-@media (max-width: 768px) {
-    .main-nav ul {
-        flex-direction: column;
-    }
-    
-    .main-nav a {
-        text-align: center;
-        border-bottom: 1px solid #eee;
-    }
-}
-
-
-/* ===========================================
-   MAIN CONTENT SECTIONS
-   =========================================== */
-
-main {
-    padding: 40px 0;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-/* Content Card - white box with shadow */
-.content-card {
-    background-color: white;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Keeps content inside rounded corners */
-}
-
-.content-padding {
-    padding: 30px;
-}
-
-/* Headings inside sections */
-.content-card h2 {
-    color: #0066cc;
-    font-size: 32px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #0066cc;
-}
-
-.content-card h3 {
-    color: #0066cc;
-    font-size: 24px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
-.content-card h4 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Paragraphs */
-.content-card p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-
-/* ===========================================
-   IMAGES
-   =========================================== */
-
-/* Hero Image - large image at top */
-.hero-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover; /* Crops image to fit without stretching */
-    display: block;
-}
-
-/* Section Images */
-.section-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 30px auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.culture-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* RESPONSIVE: Smaller image height on mobile */
-@media (max-width: 768px) {
-    .hero-image {
-        height: 250px;
-    }
-}
-
-
-/* ===========================================
-   MEDIA ELEMENTS (Audio & Video)
-   =========================================== */
-
-.media-player {
-    width: 100%;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-.video-player {
-    max-height: 500px;
-}
-
-.media-caption {
-    text-align: center;
-    font-style: italic;
-    color: #666;
-    margin-top: 10px;
-}
-
-
-/* ===========================================
-   LISTS
-   =========================================== */
-
-.list-section {
-    margin-bottom: 30px;
-}
-
-.styled-list {
-    margin-left: 20px;
-    margin-top: 15px;
-}
-
-.styled-list li {
-    margin-bottom: 12px;
-    line-height: 1.8;
-}
-
-/* Phrase list styling */
-.phrase-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.phrase-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-
-/* ===========================================
-   TABLE STYLING
-   =========================================== */
-
-.table-container {
-    overflow-x: auto; /* Allows horizontal scrolling on small screens */
-    margin: 25px 0;
-}
-
-.food-table {
-    width: 100%;
-    border-collapse: collapse; /* Removes spacing between cells */
-    background-color: white;
-}
-
-/* Table caption */
-.food-table caption {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    text-align: left;
-    color: #0066cc;
-}
-
-/* Table header */
-.food-table thead {
-    background-color: #0066cc;
-    color: white;
-}
-
-.food-table th {
-    padding: 15px;
-    text-align: left;
-    font-weight: 600;
-}
-
-/* Table cells */
-.food-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-/* Alternating row colors for readability */
-.food-table tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-/* Hover effect on rows */
-.food-table tbody tr:hover {
-    background-color: #e3f2fd;
-    transition: background-color 0.2s ease;
-}
-
-/* RESPONSIVE: Smaller font on mobile */
-@media (max-width: 768px) {
-    .food-table {
-        font-size: 14px;
-    }
-    
-    .food-table th,
-    .food-table td {
-        padding: 10px;
-    }
-}
-
-
-/* ===========================================
-   TWO-COLUMN LAYOUT
-   =========================================== */
-
-.two-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 30px;
-    margin-top: 20px;
-}
-
-/* RESPONSIVE: Stack columns on mobile */
-@media (max-width: 768px) {
-    .two-column {
-        grid-template-columns: 1fr; /* Single column */
-    }
-}
-
-
-/* ===========================================
-   INFO BOX (highlighted information)
-   =========================================== */
-
-.info-box {
-    background-color: #e3f2fd; /* Light blue background */
-    border-left: 4px solid #0066cc;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 4px;
-}
-
-.info-box h4 {
-    margin-top: 0;
-}
-
-
-/* ===========================================
-   FORM STYLING
-   =========================================== */
-
-.travel-form {
-    max-width: 600px;
-    margin: 30px 0;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-/* Form labels */
-.travel-form label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-/* Required field indicator */
-.required {
-    color: #d32f2f;
-    font-weight: bold;
-}
-
-/* Text inputs, email, date, number */
-.travel-form input[type="text"],
-.travel-form input[type="email"],
-.travel-form input[type="date"],
-.travel-form input[type="number"],
-.travel-form select,
-.travel-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-}
-
-/* Focus effect - when user clicks in input */
-.travel-form input:focus,
-.travel-form select:focus,
-.travel-form textarea:focus {
-    outline: none;
-    border-color: #0066cc;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-}
-
-/* Textarea */
-textarea {
-    resize: vertical; /* Allows vertical resizing only */
-    min-height: 100px;
-}
-
-/* Radio buttons and checkboxes */
-.radio-group,
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.radio-group input[type="radio"],
-.checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-.radio-group label,
-.checkbox-group label {
-    display: inline;
-    font-weight: normal;
-    margin-bottom: 0;
-}
-
-/* Submit button */
-.submit-button {
-    background-color: #0066cc;
-    color: white;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer; /* Shows hand cursor on hover */
-    transition: all 0.3s ease;
+/* styles.css
+   Purpose: Styles for `GreeceBrian.html`.
+   This file contains the layout, card styles and responsive rules.
+   You can tweak variables below (colors, spacing, sizes).
+*/
+
+/* Import Greek-inspired serif font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+:root{
+  --max-width:1100px;
+  --gap:16px;
+  --card-bg:#ffffff;
+  --muted:#555;
+  --greek-blue:#0066cc;
+  --gold:#d4af37;
+}
+
+/* Base page */
+body{
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+  margin:0;
+  padding:24px;
+  background:#f5f7fa;
+  color:#222;
+}
+
+/* Main title with Greek-inspired styling */
+h1{ 
+  text-align:center; 
+  margin:0 0 8px; 
+  font-family: 'Playfair Display', serif;
+  font-size:3rem;
+  color:var(--greek-blue);
+  text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.3);
+  letter-spacing:2px;
+}
+.lead{ text-align:center; margin:4px 0 20px; color:var(--muted) }
+
+/* Grid that holds the city cards.  Responsive using auto-fit. */
+.grid{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:var(--gap);
+  align-items:start;
+}
+
+/* Card visual styling */
+.card{
+  background:var(--card-bg);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(20,24,30,0.08);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.card a{ display:block; color:inherit; text-decoration:none }
+.card img{ width:100%; height:160px; object-fit:cover; display:block; transition:transform .25s ease }
+.card:hover{ transform:translateY(-6px); box-shadow:0 12px 30px rgba(20,24,30,0.12) }
+.card:hover img{ transform:scale(1.03) }
+.caption{ padding:12px }
+.caption h3{ margin:0 0 6px; font-size:1.05rem }
+.caption p{ margin:0; color:var(--muted); font-size:0.95rem }
+
+@media (max-width:420px){ .card img{ height:140px } }
+
+/* Featured card: used for Athens to make it stand out */
+.featured{ max-width:var(--max-width); margin:0 auto 20px }
+.featured .card img{ height:320px; object-fit:cover }
+
+/* 2x2 grid for the remaining four cities */
+.grid-2x2{ max-width:var(--max-width); margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:var(--gap); align-items:start }
+
+@media (max-width:700px){
+  .grid-2x2{ grid-template-columns:1fr }
+  .featured .card img{ height:180px }
+}
+
+/* Single-column layout for centered images with info boxes */
+.cities-section{ max-width:900px; margin:0 auto }
+.city-item{ margin:40px 0; text-align:center }
+.city-item img{ 
+  max-width:100%; 
+  height:auto; 
+  border-radius:8px; 
+  box-shadow:0 6px 18px rgba(20,24,30,0.12);
+  margin-bottom:20px;
+}
+
+/* Styled info box for editable content */
+.info-box{
+  background:var(--card-bg);
+  border:1px solid #e0e0e0;
+  border-left:4px solid var(--greek-blue);
+  border-radius:8px;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(20,24,30,0.08);
+  text-align:center;
+  min-height:100px;
+  font-family: 'Playfair Display', serif;
+  font-size:1.1rem;
+  color:var(--greek-blue);
+  outline:none;
 }
-
-.submit-button:hover {
-    background-color: #0052a3;
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-}
-
-.submit-button:active {
-    transform: translateY(0); /* Pressed down effect */
-}
-
-
-/* ===========================================
-   FOOTER
-   =========================================== */
-
-.site-footer {
-    background-color: #1a1a1a; /* Dark background */
-    color: #ffffff;
-    padding: 40px 0 20px;
-    margin-top: 60px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.footer-column h3 {
-    color: #0066cc;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.footer-column p {
-    color: #cccccc;
-    line-height: 1.8;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column a {
-    color: #66b3ff; /* Light blue for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-column a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-/* Footer bottom section */
-.footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 20px;
-    text-align: center;
-    color: #999;
-    font-size: 14px;
+.info-box:focus{ 
+  box-shadow:0 6px 16px rgba(0, 102, 204, 0.15);
+  border-left:4px solid var(--gold);
 }
 
-.footer-bottom p {
-    margin: 5px 0;
+.city-item h3{
+  font-family: 'Playfair Display', serif;
+  font-size:1.8rem;
+  color:var(--greek-blue);
+  margin:0 0 10px;
 }
 
-/* RESPONSIVE: Stack footer columns on mobile */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-
-/* ===========================================
-   ACCESSIBILITY IMPROVEMENTS
-   =========================================== */
-
-/* Skip to main content link (for screen readers) */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #0066cc;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
-}
-
-.skip-link:focus {
-    top: 0;
-}
-
-/* Focus indicators for keyboard navigation */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #0066cc;
-    outline-offset: 2px;
-}
-
-
-/* ===========================================
-   UTILITY CLASSES
-   =========================================== */
-
-/* Text alignment */
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-/* Spacing utilities */
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
-/* Hide on mobile */
-@media (max-width: 768px) {
-    .hide-mobile {
-        display: none;
-    }
-}
-
-/* Hide on desktop */
-@media (min-width: 769px) {
-    .hide-desktop {
-        display: none;
-    }
-}
+/* End of styles.css */

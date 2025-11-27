@@ -1,1 +1,133 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Brian's Greece Travel Page</title>
+           <!-- Link to external stylesheet. Keeping styles in a separate file
+               makes the HTML cleaner and easier to maintain. -->
+           <link rel="stylesheet" href="GreeceBrian.css">
+    </head>
+    <body>
+        <!--This is a note to centre the text and change the font-->
+        <h1>✦ Discover Ancient Greece ✦</h1>
+        <p class="lead">Explore the beauty and history of Greece through my travel experiences.</p>
+
+        <!-- Greek greeting audio using text-to-speech -->
+        <div style="text-align:center; margin:10px 0 20px;">
+            <p style="font-style:italic; color:var(--muted); margin:0 0 8px;">Greek Greeting: "Γεια σας, πώς είστε;" (Hello, how are you?)</p>
+            <button id="playGreekAudio" style="padding:10px 20px; background-color:var(--greek-blue); color:white; border:none; border-radius:5px; font-size:1rem; cursor:pointer;">🔊 Play Greek Greeting</button>
+            <p style="font-size:0.9rem; color:var(--muted); margin:8px 0 0;">Pronunciation: "Yia sas, pos iste?"</p>
+        </div>
+
+        <script>
+            // Play Greek greeting using Web Speech API
+            document.getElementById('playGreekAudio').addEventListener('click', function() {
+                const utterance = new SpeechSynthesisUtterance('Γεια σας, πώς είστε?');
+                utterance.lang = 'el-GR'; // Greek language
+                utterance.rate = 0.9; // Slightly slower for clarity
+                window.speechSynthesis.speak(utterance);
+            });
+        </script>
+
+        <!-- YouTube video embed -->
+        <div style="max-width:1100px; margin:20px auto; display:block; border-radius:8px; overflow:hidden;">
+            <iframe width="100%" height="538" src="https://www.youtube.com/embed/HwtV0etcZRg" title="🇬🇷 Greece CINEMATIC 4K. Clearly, this is heaven on earth." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h2 style="text-align:center;margin-top:8px">Top Destinations in Greece</h2>
+        <p style="text-align:center;margin:6px 0 20px;color:var(--muted)">Click a photo to open a Skyscanner flight search for that city (destination pre-filled). Skyscanner focuses on flights — use Rome2rio or local ferry sites for multi-modal or ferry routes.</p>
+        <!-- Athens featured card: kept at the top and made larger -->
+        <div class="featured">
+            <div class="card">
+                <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagesforGreece/Athens.jpg" alt="Athens">
+                    <div class="caption">
+                        <h3>Athens</h3>
+                        <p>The capital city, home to the Acropolis and Parthenon.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2x2 grid for the remaining cities in the order requested -->
+        <div class="grid-2x2">
+            <div class="card">
+                <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagesforGreece/Mykonos.jpg" alt="Mykonos">
+                    <div class="caption">
+                        <h3>Mykonos</h3>
+                        <p>Known for its vibrant nightlife and beautiful beaches.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagesforGreece/Crete.jpg" alt="Crete">
+                    <div class="caption">
+                        <h3>Crete</h3>
+                        <p>The largest island, rich in history and natural beauty.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagesforGreece/Santorini.jpg" alt="Santorini">
+                    <div class="caption">
+                        <h3>Santorini</h3>
+                        <p>Famous for its stunning sunsets and white-washed buildings.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="imagesforGreece/Rhodes.jpg" alt="Rhodes">
+                    <div class="caption">
+                        <h3>Rhodes</h3>
+                        <p>A blend of medieval architecture and sunny beaches.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Centered images with editable info boxes -->
+        <h2 style="text-align:center;margin-top:40px;margin-bottom:10px">My Travel Notes</h2>
+        <p style="text-align:center;margin:6px 0 30px;color:var(--muted)">Fill in the boxes below with your own travel experiences and notes for each city.</p>
+        <div class="cities-section">
+            <!-- Athens -->
+            <div class="city-item">
+                <h3>Athens</h3>
+                <img src="imagesforGreece/Athens.jpg" alt="Athens">
+                <div class="info-box" contenteditable="true">Athens is one of the most influential cities in human thought, celebrated as the birthplace of Western philosophy. It was here that thinkers such as Socrates shaped ideas through open dialogue, ethics, and questioning norms—methods that inspired his students, including Plato. Plato later founded the Platonic Academy archaeological site, the first institution of higher learning in Europe, where philosophy, maths and science were taught. Another giant of intellectual history, Aristotle, established the Lyceum, promoting logic, metaphysics, politics and natural sciences. Visitors can explore areas linked to these schools and imagine philosophical debates unfolding beneath olive trees.</div>
+            </div>
+
+            <!-- Mykonos -->
+            <div class="city-item">
+                <h3>Mykonos</h3>
+                <img src="imagesforGreece/Mykonos.jpg" alt="Mykonos">
+                <div class="info-box" contenteditable="true">Mykonos is the most cosmopolitan island of the Cyclades, built for glamour, beaches and nightlife. Elegant hotels, boutique shopping and renowned beach clubs define the pace of summer. The scenic district of Little Venice of Mykonos is the sunset icon, lined with cocktail bars and music venues. Days are spent between Paradise, Psarou and Super Paradise beaches—lounging, dining and dancing into evening. Even outside nightlife, Mykonos charms with narrow white streets, blue doors, artisan galleries and windmill viewpoints. It’s ideal for social travellers, luxury seekers and party lovers who want to pair aesthetics with nonstop entertainment.</div>
+            </div>
+
+            <!-- Crete -->
+            <div class="city-item">
+                <h3>Crete</h3>
+                <img src="imagesforGreece/Crete.jpg" alt="Crete">
+                <div class="info-box" contenteditable="true">Crete is Greece’s largest and most diverse island, where dramatic mountains meet electric-blue seas. Known as the heart of the Minoan civilisation, it offers archaeology, mythology, cuisine and adventure. The palace of Palace of Knossos is the island’s most famous ancient ruin, tied to the myth of the Minotaur. But Crete is far more than a single site—beaches range from the pink sands of Elafonisi to the calm family shores of Almyrida. Inland, travellers can hike the breathtaking Samaria Gorge, one of Europe’s longest canyons, carved through wild nature and traditional mountain paths.</div>
+            </div>
+
+            <!-- Santorini -->
+            <div class="city-item">
+                <h3>Santorini</h3>
+                <img src="imagesforGreece/Santorini.jpg" alt="Santorini">
+                <div class="info-box" contenteditable="true">Santorini is one of the world’s most photographed islands, shaped around a vast volcanic caldera. Clifftop villages like Oia, Imerovigli and Fira spill over the crater edges with blue-domed churches and infinity balconies. Wine culture is exceptional here—indigenous grapes such as Assyrtiko are sampled best on vineyard terraces with Aegean panoramas. Beaches are striking and volcanic, from red cliffs at Akrotiri to the black sands of Kamari and Perissa. Honeymoon-style hotels, slow breakfasts, spa terraces and cinematic sunsets create a romantic mood. Santorini suits couples, creatives, photographers and peace-seekers wanting awe-inspiring surroundings and restful atmosphere.</div>
+            </div>
+
+            <!-- Rhodes -->
+            <div class="city-item">
+                <h3>Rhodes</h3>
+                <img src="imagesforGreece/Rhodes.jpg" alt="Rhodes">
+                <div class="info-box" contenteditable="true">Rhodes blends fortress history with classic island leisure. The UNESCO-protected old city, Medieval City of Rhodes, features stone walls, moats, palaces and the famous Street of the Knights. Nearby, the hillside village of Lindos mixes whitewashed beauty with sea-view ruins, perfect for scenic wandering and photography. Rhodes also delivers adrenaline, particularly windsurfing at Prasonisi, plus organised beaches, boat trips, and lively seaside promenades. By night, Mandraki Harbour glows with cafés, shops and relaxed energy. Rhodes suits travellers who want a cultural citybreak layered on top of sun-and-sea escapism.</div>
+            </div>
+        </div>
+    </body>
+</html>
