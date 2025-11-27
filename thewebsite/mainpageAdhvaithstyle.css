@@ -26,11 +26,11 @@ body::before {
 
 /* Background images */
 .bg-home {
-  background: url('airplane.jpg') no-repeat center/cover;
+  background: url('imagestobeusedforJapanPage/airplane.jpg') no-repeat center/cover;
 }
 
 .bg-malaysia {
-  background: url('malaysia.jpg') no-repeat center/cover;
+  background: url('imagestobeusedforJapanPage/malaysia.jpg') no-repeat center/cover;
 }
 
 /* ===============================
