@@ -140,6 +140,35 @@ nav ul li a:hover{
     gap: 30px;
     margin-top: 40px;
 }
+
+.locations-section3 {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.locations-section3 .container {
+    width: 90%;
+    margin: auto;
+    padding: 0 80px;
+}
+
+.locations-section3 h1 {
+    color: #333;
+    margin: 25px;
+    margin-bottom: 50px;
+    font-size: 56px;
+    font-family: myFont;
+    text-shadow: #000 2px 2px 2px;
+}
+
+.locations-section3 .locations-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
 .video-section {
     background: #ffffff;
     padding: 60px 0;
