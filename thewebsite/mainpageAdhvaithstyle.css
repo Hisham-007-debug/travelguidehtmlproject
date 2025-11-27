@@ -127,102 +127,437 @@ body::before {
   font-size: 1.4rem;
 }
 
-/* ===============================
-   MALAYSIA PAGE HERO
-================================*/
-.hero {
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 330px;
-  background-image: url('malaysia-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  margin-bottom: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #FFD700, #FF6B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
   position: relative;
 }
 
-.hero-text {
+.nav-links a::after {
+  content: '';
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-  font-weight: bold;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
-
-/* ===============================
-   CONTENT SECTIONS
-================================*/
-.section {
-  background: rgba(255,255,255,0.95);
-  color: #000;
-  padding: 25px;
-  margin: 40px auto;
-  width: 90%;
-  max-width: 800px;
-  border-radius: 18px;
-  box-shadow: 0 5px 16px rgba(0,0,0,0.2);
-}
-
-.section h2 {
-  color: #007777;
-  margin-bottom: 10px;
-}
-
-.location-img {
+.nav-links a:hover::after {
   width: 100%;
-  max-height: 260px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin: 10px 0;
 }
 
-/* Buttons */
-.buttons {
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('malaysia-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.gallery-btn, .flight-btn {
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.gallery-btn {
-  background: #ffd369;
-  color: #000;
-}
-
-.flight-btn {
-  background: #0099ff;
-  color: #fff;
-}
-
-.gallery-btn:hover,
-.flight-btn:hover {
-  opacity: 0.85;
-}
-
-/* ===============================
-   FOOTER
-================================*/
-.footer {
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 50px;
-  font-size: 1rem;
-  color: #fff;
-  opacity: 0.9;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+}
+
+/* Video Section */
+.video-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 3rem;
+}
+
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.travel-video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+.audio-controls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.audio-toggle {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.audio-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Destinations Section */
+.destinations {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.destination-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card:nth-child(even) {
+  direction: rtl;
+}
+
+.destination-card:nth-child(even) .card-content {
+  direction: ltr;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.card-tag {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.card-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.card-content > p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.highlights {
+  margin-bottom: 2rem;
+}
+
+.highlights h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.highlights li:last-child {
+  border-bottom: none;
+}
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #c8102e, #a00d26);
+  color: white;
+  box-shadow: 0 4px 15px rgba(200, 16, 46, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 16, 46, 0.5);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #8b6f47, #6d5637);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 111, 71, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 111, 71, 0.5);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FFD700;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .destination-card {
+    grid-template-columns: 1fr;
+    direction: ltr !important;
+  }
+
+  .card-content {
+    padding: 2rem;
+  }
+
+  .card-content h3 {
+    font-size: 2rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
