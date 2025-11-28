@@ -363,9 +363,13 @@ body {
   list-style-position: inside;
 }
 
-/* Make place-card text black (overrides the site-wide white) */
+/* Make place-card content text black */
 .place-card .card-content,
-.place-card .card-content * {
+.place-card .card-content h3,
+.place-card .card-content p,
+.place-card .card-content ul,
+.place-card .card-content li,
+.place-card .card-content a {
   color: #000 !important;
 }
 
