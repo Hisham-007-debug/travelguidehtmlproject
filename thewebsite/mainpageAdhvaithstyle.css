@@ -203,28 +203,32 @@ body {
 }
 
 .destination-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  background: #fff;
-  border-radius: 20px;
+  width: 30%;
+  max-width: 320px;
+  margin: 15px auto;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .destination-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
-.destination-card:nth-child(even) {
-  direction: rtl;
+.dest-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
-.destination-card:nth-child(even) .card-content {
-  direction: ltr;
+.dest-info {
+  padding: 12px;
+  background: #f8f8f8;
+  min-height: 80px;
 }
 
 .card-image {
