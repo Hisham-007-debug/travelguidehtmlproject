@@ -2,181 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malaysia | Travel Guide</title>
   <link rel="stylesheet" href="mainpageAdhvaithstyle.css">
 </head>
+
 <body>
-  <!-- NAVBAR -->
+
+  <!-- NAVBAR (Home only) -->
   <nav class="navbar">
     <div class="logo">TravelMag</div>
     <ul class="nav-links">
       <li><a href="mainpgAdhvaith.html">Home</a></li>
-      <li><a href="#tips">Tips</a></li>
-      <li><a href="#hotels">Hotels</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Welcome to Malaysia</h1>
       <p class="hero-subtitle">Where culture, nature, and adventure connect.</p>
-      <a href="#destinations" class="cta-button">Explore Destinations</a>
     </div>
   </header>
 
-  <!-- VIDEO SECTION -->
-  <section class="video-section">
-    <div class="container">
-      <h2 class="section-title">Discover Malaysia</h2>
-      <p class="section-subtitle">Experience the beauty and diversity of Malaysia</p>
-      <div class="video-wrapper">
-        <video controls poster="malaysia-poster.jpg" class="travel-video">
-          <source src="malaysia-travel.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- Background Audio -->
-      <div class="audio-controls">
-        <audio id="bgAudio" loop>
-          <source src="malaysia-ambient.mp3" type="audio/mpeg">
-        </audio>
-        <button class="audio-toggle" onclick="toggleAudio()">
-          <span id="audioIcon">🔇</span> Background Music
-        </button>
-      </div>
-    </div>
-  </section>
-
   <!-- DESTINATIONS -->
-  <section class="destinations" id="destinations">
+  <section class="destinations">
     <div class="container">
       <h2 class="section-title">Popular Destinations</h2>
-      
-      <!-- KUALA LUMPUR -->
+
+      <!-- CARD 1 -->
       <div class="destination-card">
-        <div class="card-image">
-          <img src="imagestobeusedforJapanPage/kualalumpur.jpg" alt="Kuala Lumpur">
-          <div class="card-overlay">
-            <span class="card-tag">Capital City</span>
-          </div>
-        </div>
-        <div class="card-content">
+        <img src="imagestobeusedforJapanPage/kualalumpur.jpg" class="dest-img">
+        <div class="dest-info">
           <h3>Kuala Lumpur</h3>
-          <p>Kuala Lumpur blends futuristic skyscrapers, vibrant street markets, and world-famous cultural landmarks.</p>
-          <div class="highlights">
-            <h4>Must-See Attractions:</h4>
-            <ul>
-              <li>🏙️ Petronas Twin Towers</li>
-              <li>🕌 Batu Caves</li>
-              <li>🛍️ Bukit Bintang</li>
-              <li>🍜 Street Food at Jalan Alor</li>
-            </ul>
-          </div>
-          <div class="card-actions">
-            <a href="https://www.emirates.com/my/english/book-a-flight/" target="_blank" class="btn btn-primary">
-              ✈️ Book with Emirates
-            </a>
-            <a href="https://www.etihad.com/en-my/" target="_blank" class="btn btn-secondary">
-              ✈️ Book with Etihad
-            </a>
-          </div>
+          <p>Skyscrapers, street food, and cultural landmarks.</p>
+          <ul>
+            <li>Petronas Towers</li>
+            <li>Batu Caves</li>
+            <li>Bukit Bintang</li>
+            <li>Street Food at Jalan Alor</li>
+          </ul>
         </div>
       </div>
 
-      <!-- LANGKAWI -->
+      <!-- CARD 2 -->
       <div class="destination-card">
-        <div class="card-image">
-          <img src="imagestobeusedforJapanPage/langkawi.jpg" alt="Langkawi">
-          <div class="card-overlay">
-            <span class="card-tag">Island Paradise</span>
-          </div>
-        </div>
-        <div class="card-content">
+        <img src="imagestobeusedforJapanPage/langkawi.jpg" class="dest-img">
+        <div class="dest-info">
           <h3>Langkawi</h3>
-          <p>Langkawi offers turquoise beaches, thick rainforests, and the iconic Sky Bridge.</p>
-          <div class="highlights">
-            <h4>Must-See Attractions:</h4>
-            <ul>
-              <li>🏖️ Cenang Beach</li>
-              <li>🚡 Langkawi Cable Car</li>
-              <li>🌉 Sky Bridge</li>
-              <li>🚤 Island Hopping Tour</li>
-            </ul>
-          </div>
-          <div class="card-actions">
-            <a href="https://www.emirates.com/my/english/book-a-flight/" target="_blank" class="btn btn-primary">
-              ✈️ Book with Emirates
-            </a>
-            <a href="https://www.etihad.com/en-my/" target="_blank" class="btn btn-secondary">
-              ✈️ Book with Etihad
-            </a>
-          </div>
+          <p>Beaches, rainforests, and the famous Sky Bridge.</p>
+          <ul>
+            <li>Cenang Beach</li>
+            <li>Sky Bridge</li>
+            <li>Cable Car</li>
+            <li>Island Hopping</li>
+          </ul>
         </div>
       </div>
 
-      <!-- PENANG -->
+      <!-- CARD 3 -->
       <div class="destination-card">
-        <div class="card-image">
-          <img src="imagestobeusedforJapanPage/penang.jpg" alt="Penang">
-          <div class="card-overlay">
-            <span class="card-tag">Cultural Hub</span>
-          </div>
-        </div>
-        <div class="card-content">
+        <img src="imagestobeusedforJapanPage/penang.jpg" class="dest-img">
+        <div class="dest-info">
           <h3>Penang</h3>
-          <p>Penang is Malaysia's cultural and food capital with temples, viewpoints, and street art.</p>
-          <div class="highlights">
-            <h4>Must-See Attractions:</h4>
-            <ul>
-              <li>🎨 George Town Street Art</li>
-              <li>🛕 Kek Lok Si Temple</li>
-              <li>⛰️ Penang Hill</li>
-              <li>🍲 Local Food Markets</li>
-            </ul>
-          </div>
-          <div class="card-actions">
-            <a href="https://www.emirates.com/my/english/book-a-flight/" target="_blank" class="btn btn-primary">
-              ✈️ Book with Emirates
-            </a>
-            <a href="https://www.etihad.com/en-my/" target="_blank" class="btn btn-secondary">
-              ✈️ Book with Etihad
-            </a>
-          </div>
+          <p>Culture, temples, street art, and iconic food.</p>
+          <ul>
+            <li>George Town Art</li>
+            <li>Kek Lok Si Temple</li>
+            <li>Penang Hill</li>
+            <li>Street Food Markets</li>
+          </ul>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 TravelMag | Explore. Dream. Discover.</p>
-      <div class="social-links">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-      </div>
-    </div>
+    <p>© 2025 TravelMag | Explore. Dream. Discover.</p>
   </footer>
 
-  <script>
-    
-
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
-      } else {
-        navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-        navbar.style.boxShadow = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
+
