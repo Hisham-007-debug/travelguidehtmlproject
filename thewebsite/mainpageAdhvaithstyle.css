@@ -210,7 +210,7 @@ body {
   position: relative;
   height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-image: url('malaysia-hero.jpg');
+  background-image: url('malaysia.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
