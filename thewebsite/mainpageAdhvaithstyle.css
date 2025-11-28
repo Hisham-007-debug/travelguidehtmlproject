@@ -33,6 +33,23 @@ body::before {
   z-index: -1;
 }
 
+/* Force site-wide white text */
+body,
+body * {
+  color: #ffffff !important;
+}
+
+/* Make links white and keep hover visible */
+a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+a:hover,
+.nav-links a:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -323,5 +340,26 @@ body {
   .video-player {
     width: 95%;
   }
+}
+
+/* Specific widgets where color can be overridden by other rules */
+.navbar,
+.logo,
+.nav-links li a,
+.title-section h1,
+.quote,
+.section-title,
+.place-card .card-content h3,
+.place-card .card-content p,
+.place-card .card-content ul li,
+.video-section h2,
+.footer p {
+  color: #ffffff !important;
+}
+
+/* Ensure list markers are visible on white text backgrounds */
+.place-card .card-content ul {
+  color: #ffffff !important;
+  list-style-position: inside;
 }
 
