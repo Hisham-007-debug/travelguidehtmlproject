@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Malaysia | Travel Guide</title>
-  <link rel="stylesheet" href="mainpageAdhvaithstyle.css">
+  <link rel="stylesheet" href="malaysia.css" />
 </head>
 
 <body>
 
-  <!-- NAVBAR (Home only) -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">TravelMag</div>
     <ul class="nav-links">
@@ -17,41 +17,42 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">Welcome to Malaysia</h1>
-      <p class="hero-subtitle">Where culture, nature, and adventure connect.</p>
+    <img src="imagestobeusedforJapanPage/malaysia.jpg" class="hero-img" alt="Malaysia Hero">
+    <div class="hero-text">
+      <h1>Welcome to Malaysia</h1>
+      <p>Where culture and adventure come alive.</p>
     </div>
   </header>
 
-  <!-- DESTINATIONS -->
+  <!-- DESTINATIONS SECTION -->
   <section class="destinations">
-    <div class="container">
-      <h2 class="section-title">Popular Destinations</h2>
+    <h2 class="section-title">Top Places to Visit</h2>
+
+    <div class="places-wrapper">
 
       <!-- CARD 1 -->
-      <div class="destination-card">
-        <img src="imagestobeusedforJapanPage/kualalumpur.jpg" class="dest-img">
-        <div class="dest-info">
+      <div class="place-card">
+        <img src="imagestobeusedforJapanPage/kualalumpur.jpg" alt="Kuala Lumpur">
+        <div class="card-content">
           <h3>Kuala Lumpur</h3>
-          <p>Skyscrapers, street food, and cultural landmarks.</p>
+          <p>Skyscrapers, vibrant culture & famous landmarks.</p>
           <ul>
             <li>Petronas Towers</li>
             <li>Batu Caves</li>
-            <li>Bukit Bintang</li>
-            <li>Street Food at Jalan Alor</li>
+            <li>KL Tower</li>
+            <li>Jalan Alor Street Food</li>
           </ul>
         </div>
       </div>
 
       <!-- CARD 2 -->
-      <div class="destination-card">
-        <img src="imagestobeusedforJapanPage/langkawi.jpg" class="dest-img">
-        <div class="dest-info">
+      <div class="place-card">
+        <img src="imagestobeusedforJapanPage/langkawi.jpg" alt="Langkawi">
+        <div class="card-content">
           <h3>Langkawi</h3>
-          <p>Beaches, rainforests, and the famous Sky Bridge.</p>
+          <p>Beautiful beaches & nature experiences.</p>
           <ul>
             <li>Cenang Beach</li>
             <li>Sky Bridge</li>
@@ -62,16 +63,16 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="destination-card">
-        <img src="imagestobeusedforJapanPage/penang.jpg" class="dest-img">
-        <div class="dest-info">
+      <div class="place-card">
+        <img src="imagestobeusedforJapanPage/penang.jpg" alt="Penang">
+        <div class="card-content">
           <h3>Penang</h3>
-          <p>Culture, temples, street art, and iconic food.</p>
+          <p>A cultural hub full of temples and artwork.</p>
           <ul>
-            <li>George Town Art</li>
+            <li>George Town Street Art</li>
             <li>Kek Lok Si Temple</li>
             <li>Penang Hill</li>
-            <li>Street Food Markets</li>
+            <li>Hawker Food Markets</li>
           </ul>
         </div>
       </div>
@@ -79,9 +80,20 @@
     </div>
   </section>
 
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <h2>Experience Malaysia</h2>
+    <video controls class="video-player">
+      <source src="malaysiavideo.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 TravelMag | Explore. Dream. Discover.</p>
   </footer>
 
 </body>
 </html>
+
